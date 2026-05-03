@@ -1,0 +1,145 @@
+/* Gruvbox Dark Palette */
+:root {
+    --bg0: #282828;
+    --bg1: #3c3836;
+    --fg: #ebdbb2;
+    --gray: #928374;
+    --red: #fb4934;
+    --green: #b8bb26;
+    --yellow: #fabd2f;
+    --blue: #83a598;
+    --aqua: #8ec07c;
+    --orange: #fe8019;
+}
+
+body {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    background-color: var(--bg0);
+    color: var(--fg);
+    padding: 40px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: var(--orange);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box {
+    background-color: var(--bg1);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--gray);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+h3 {
+    margin-top: 0;
+    color: var(--aqua);
+    font-size: 1rem;
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    background-color: var(--bg0);
+    color: var(--fg);
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    padding: 15px;
+    font-family: inherit;
+    resize: none;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+button {
+    background-color: var(--green);
+    color: var(--bg0);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--aqua);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#registers, #pc {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: var(--yellow);
+}
+
+#console {
+    background-color: var(--bg0);
+    padding: 15px;
+    border-radius: 4px;
+    min-height: 100px;
+    font-size: 0.9rem;
+    border: 1px solid var(--gray);
+    overflow-y: auto;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--gray);
+    margin: 20px 0;
+}
+
+/* Mobile Compatibility Media Query */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px; /* Less padding on small screens */
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Stack boxes vertically */
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    textarea {
+        height: 150px; /* Slightly taller for mobile typing */
+    }
+
+    .box {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%; /* Make buttons full-width for easy tapping */
+        margin-left: 0 !important;
+        margin-bottom: 10px;
+    }
+}

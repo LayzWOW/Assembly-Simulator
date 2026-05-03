@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>TMF1214 ISA Simulator</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>8-Bit Web CPU Simulator</h1>
+		<div class="grid">
+			<div class="box">
+				<h3>Assembly Code</h3>
+				<textarea id="code" placeholder="Enter assembly here..."></textarea>
+				<br>
+				<button onclick="runProgram()">Execute Program</button>
+				<button onclick="clearAll()" style="background-color: #fb4934; margin-left: 10px;">Clear All</button>
+			</div>
+			<div class="box">
+				<h3>CPU State</h3>
+				<div id="registers">Registers: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</div>
+				<div id="pc">PC: 0</div>
+				<hr>
+				<h3>Output Console</h3>
+				<div id="console"></div>
+			</div>
+		</div>
+		<script src="simulator.js"></script>
+	</body>
+</html>
